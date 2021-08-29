@@ -32,7 +32,7 @@ namespace SmartSchool.WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<SmartContext>(
-                    context => context.UseSqlite(Configuration.GetConnectionString("Default")));
+                    context => context.UseMySql(Configuration.GetConnectionString("MySqlConnection")));
             
             //services.AddSingleton<IRepository, Repository>();
             //services.AddTransient<IRepository, Repository>();
@@ -75,7 +75,7 @@ namespace SmartSchool.WebAPI
                                     Title = "SmartSchool API",
                                     Version = description.ApiVersion.ToString(),
                                     TermsOfService = new Uri("https://www.google.com.br/"),
-                                    Description = "A descrição do web api SmartSchol",
+                                    Description = "A descriï¿½ï¿½o do web api SmartSchol",
                                     License = new Microsoft.OpenApi.Models.OpenApiLicense
                                     {
                                         Name = "SmartSchool Licence",
